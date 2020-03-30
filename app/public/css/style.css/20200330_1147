@@ -1,0 +1,1445 @@
+html, body {
+	overflow: auto;
+}
+
+
+.container.footMenu {
+	padding-bottom: 75px;
+
+}
+
+.container {
+	max-width: 720px;
+	margin: 0 auto;
+	position: relative;
+	min-height: 100%;
+	padding: 0;
+
+}
+
+.container.popup:before{
+	content: '';
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	top:0;
+	background:rgba(0,0,0,0.5);
+	z-index: 1;
+
+}
+
+.container.bg {
+	background:#f1f3ff;
+}
+
+
+/* common */
+header {
+	text-align: center;
+	position: relative;
+	padding: 0 20px;
+	border-bottom: 1px solid #e1e1e1;
+	background-color: #fff;
+}
+
+header.main {
+	border-bottom: 0;
+}
+
+header .logo{
+	font-size: 18px;
+	font-weight: 700;
+	display: inline-block;
+	line-height: 50px;
+
+}
+header a.logo {
+	padding-right:17px;
+	background:url("../img/icon_logoArrow.png") no-repeat right center / 11.5px 18.5px;
+}
+
+header .headerBtn,
+header .backBtn{
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 5px;
+}
+
+
+header .backBtn .ic_back {
+	background: url("../img/icon_header_back.png") no-repeat center / cover;
+	width: 12px;
+	height: 20px;
+	vertical-align: baseline;
+
+}
+
+
+header .searchBtn .ic_search {
+	background: url("../img/icon_header_search.png") no-repeat center / cover;
+	width: 20px;
+	height: 20px;
+}
+
+header .searchBtn,
+header .controlBtn,
+header .filterBtn ,
+header .regBtn,
+header .txtBtn {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 5px;
+}
+
+header .headerBtn .ic_header {
+	background: url("../img/icon_header_menu.png") no-repeat center / cover;
+	width: 20px;
+	height: 17px;
+}
+
+header .controlBtn .ic_control {
+	background: url("../img/icon_header_control.png") no-repeat center / cover;
+	width: 19px;
+	height: 19px;
+}
+
+header .filterBtn .ic_filter {
+	background: url("../img/icon_header_filter.png") no-repeat center / cover;
+	width: 18px;
+	height: 19px;
+}
+
+header .regBtn .ic_reg {
+	background: url("../img/icon_header_reg.png") no-repeat center / cover;
+	width: 19px;
+	height: 19px;
+}
+
+header .txtBtn{
+	font-size: 14px;
+	font-weight: 700;
+	color: #273d52;
+}
+
+
+header.main .logo img {
+	width: 50%;
+	height: auto;
+}
+
+header.main .header_btn_box {
+
+}
+
+header.main .alarm_btn,
+header.main .all_btn {
+	display: inline-block;
+	padding: 5px;
+	vertical-align: middle;
+	position: relative;
+}
+
+header.main .all_btn {
+	margin-left: 5px;
+}
+
+header.main .ic_alarm {
+	background: url("../img/icon_alarm.png") no-repeat center / cover;
+	width: 25px;
+	height: 26px;
+}
+
+header.main .ic_all {
+	background: url("../img/icon_all_btn.png") no-repeat center / cover;
+	width: 21px;
+	height: 17px;
+}
+
+header.main .alarm_count {
+	position: absolute;
+	right: 0px;
+	top: 3px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 16px;
+	font-size: 10px;
+	color: #fff;
+	width: 20px;
+	/*height: 16px;*/
+	background-color: #eb6696;
+	border: 1px solid #b0b0b0;
+
+}
+
+
+header .header_txt {
+	color: #202020;
+	font-size: 18px;
+	display: inline-block;
+	padding: 16px 0;
+	font-weight: 500;
+}
+
+header .back_btn {
+	position: absolute;
+	left: 10px;
+	padding: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+header .ic_back {
+	background: url("../img/icon_header_back_btn.png") no-repeat center / cover;
+	width: 10px;
+	height: 15px;
+
+}
+
+
+
+.mainVisual ,
+.mainBattery ,
+.mainLocation {
+	font-size: 0;
+}
+
+.mainVisual .mainImg img,
+.mainLocation .mainImg img{
+	width: 100%;
+	font-size: 0;
+
+}
+
+.mainBattery .batteryGroup{
+	background-color: #f1f3ff;
+	padding:80px 0 80px 38px;
+	display:block;
+	position:relative;
+
+}
+.mainBattery .batteryGroup .batteryTxt{
+	font-size: 25px;
+	font-weight: 900;
+	line-height: 30px;
+}
+.mainBattery .batteryGroup .batteryChart{
+	position: absolute;
+	right:38px;
+	top:50%;
+	transform: translateY(-50%);
+	color: #1b1f40;
+	font-size: 30px;
+	font-weight: 900;
+}
+
+
+.footerInfo{
+	text-align: center;
+	padding:15px 0 21px;
+	background-color: #1b1f40;
+}
+.footerInfo .footerMenu{
+	font-size: 0;
+}
+.footerInfo .footerMenu a{
+	display:inline-block;
+	font-size: 12px;
+	color: #fff;
+	position:relative;
+	padding:5px;
+}
+
+
+
+.footerInfo .footerMenu a:first-child:after{
+	display: none;
+}
+.footerInfo .footerMenu a:after{
+	content:'';
+	position:absolute;
+	left:-15px;
+	top:50%;
+	transform: translateY(-50%);
+	background-color: #fff;
+	width: 1px;
+	height: 14px;
+}
+.footerInfo .footerMenu a + a{
+	margin-left: 25px;
+}
+
+.footerInfo .footerTxt{
+	line-height: 18px;
+	font-size: 12px;
+	color: #fff;
+	padding-top: 15px;
+}
+
+/* header */
+.headerMenuWrap{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 101;
+	background-color: #fff;
+
+}
+.headerMenuWrap .titBox{
+	padding:20px;
+	position:relative;
+	text-align: left;
+	font-size: 0;
+}
+.headerMenuWrap .userTit{
+	display:inline-block;
+	padding-right:17px;
+	background:url("../img/icon_headerArrow.png") no-repeat right center / 7px 11px;
+
+
+}
+.headerMenuWrap .userName{
+	font-size: 15px;
+	font-weight: 700;
+}
+.headerMenuWrap .userTerm{
+	font-size: 12px;
+}
+
+.headerMenuWrap .userName,
+.headerMenuWrap .userTerm{
+	display:inline-block;
+	vertical-align: middle;
+}
+.headerMenuWrap .headerCloseBtn{
+	position:absolute;
+	right:15px;
+	top:50%;
+	transform: translateY(-50%);
+	padding:5px;
+}
+.headerMenuWrap .headerCloseBtn .ic_headerClose{
+	background:url("../img/icon_cancelBtn.png") no-repeat center / cover;
+	width: 17px;
+	height: 17px;
+}
+.headerMenuWrap .headerCloseBtn .ic_headerClose{
+	background:url("../img/icon_cancelBtn.png") no-repeat center / cover;
+	width: 17px;
+	height: 17px;
+}
+/* .headerMenuGroup {
+	position : fixed;
+	width : 100%;
+	height : 100%;
+	top : 0;
+	left : 0;
+	background-color : #fff;
+	z-index : 100;
+} */
+.headerMenuGroup nav .navBox{
+	display:block;
+	text-align: left;
+	font-size: 0;
+	padding:0 20px 0 55px;
+	position: relative;
+}
+.headerMenuGroup nav .navBox .navTxt{
+	display:inline-block;
+	font-size: 15px;
+	line-height: 50px;
+
+}
+.headerMenuGroup nav .navBox .navCon{
+	position:absolute;
+	right:20px;
+	top:50%;
+	transform: translateY(-50%);
+	font-size: 18px;
+	font-weight: 700;
+}
+.headerMenuGroup nav .navBox .navCon .per{
+	font-size: 12px;
+	font-weight: 400;
+}
+.headerMenuGroup nav a.navBox:after{
+	content: '';
+	position:absolute;
+	right:20px;
+	top:50%;
+	transform: translateY(-50%);
+	width: 7px;
+	height: 11px;
+	background:url("../img/icon_headerArrow.png") no-repeat center center / 7px 11px;
+}
+
+.headerMenuGroup nav .navBox:nth-child(1){
+	background:url("../img/icon_headerMenu1.png") no-repeat left 20px center / 20px 20px;
+}
+.headerMenuGroup nav .navBox:nth-child(2){
+	background:url("../img/icon_headerMenu2.png") no-repeat left 20px center / 21.5px 20.5px;
+}
+.headerMenuGroup nav .navBox:nth-child(3){
+	background:url("../img/icon_headerMenu3.png") no-repeat left 20px center / 20px 20px;
+}
+.headerMenuGroup nav .navBox:nth-child(4){
+	background:url("../img/icon_headerMenu4.png") no-repeat left 20px center / 20px 20px;
+}
+.headerMenuGroup nav .navBox:nth-child(5){
+	background:url("../img/icon_headerMenu5.png") no-repeat left 20px center / 21px 20px;
+}
+.headerMenuGroup nav .navBox:nth-child(6){
+	background:url("../img/icon_qrIcon.png") no-repeat left 20px center / 20px 20px;
+}
+.headerMenuGroup nav .navBox:nth-child(7){
+	background:url("../img/icon_headerMenu6.png") no-repeat left 20px center / 20px 20px;
+}
+
+/** popup **/
+
+#popup{
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50% , -50%);
+	background-color: #fff;
+	z-index: 5;
+	min-width: 320px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+#popup .popupFooter{
+	font-size: 0;
+	border:1px solid #7b03fe;
+	text-align: center;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+#popup .popupFooter a.full{
+	width: 100%;
+	background-color: #7b03fe;
+	color: #fff;
+}
+
+#popup .popupFooter a{
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #7b03fe;
+	width: 50%;
+	display:inline-block;
+	vertical-align: top;
+}
+#popup .popupFooter a + a{
+	background-color: #7b03fe;
+	color: #fff;
+}
+
+#popup .popupCon{
+	padding:24px 0;
+}
+#popup .popupCon .mainTxt{
+	font-size: 15px;
+	font-weight: 500;
+	line-height:  18px;
+	text-align: center;
+}
+#popup .popupCon .mainTxt.type1{
+	padding:20px 0;
+}
+
+#popup .popupCon .subTxt{
+	padding-top: 7px;
+	font-size: 12px;
+	text-align: center;
+
+}
+
+.container.popup:before{
+	content: '';
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	top:0;
+	background:rgba(0,0,0,0.5);
+	z-index: 1;
+
+}
+
+
+
+.inputBox{
+	/* background-color: #f1f3ff; */
+	/* padding:7.5px 136px 7.5px 15px; */
+	position:relative;
+}
+.inputBox input{
+	border:none;
+	/* background:transparent; */
+	/* height: 35px; */
+	outline: none;
+	width: 100%;
+	font-size: 15px;
+	background-color: #f1f3ff;
+	padding:7.5px 136px 7.5px 15px;
+	height : 50px;
+}
+.inputBox.certify{
+	padding-right:170px;
+}
+
+.inputBox.full{
+	/* padding-right:15px; */
+}
+.inputBox.full input {
+	padding:7.5px 15px 7.5px 15px;
+}
+
+.inputBox input::placeholder{
+	color: #878787;
+}
+
+/* :: ksg_20200122_1148 open */
+.inputBox.withTip {
+	margin-bottom : 30px;
+}
+/* .inputBox .tipBox {
+	font-size : 14px;
+	line-height : 20px;
+	position : relative;
+	bottom : -1px;
+	padding-left : 10px;
+} */
+.tipBox {
+	/* position : absolute;
+	bottom : -17px;
+	left : 10px; */
+	font-size : 14px;
+	line-height : 20px;
+	position : relative;
+	bottom : -4px;
+	padding-left : 10px;
+}
+/* :: ksg_20200122_1148 close */
+
+
+.inputBox.certify .certifyTime{
+	position:absolute;
+	right:130px;
+	top:50%;
+	transform: translateY(-50%);
+	font-size: 15px;
+}
+
+.inputBox .btn{
+	line-height: 35px;
+	text-align: center;
+	/*padding:0 36px;*/
+	width: 100px;
+	font-size: 15px;
+	font-weight: 500;
+	border-radius: 4px;
+	border:1px solid #24284f;
+	background-color: #fff;
+	position:absolute;
+	right:15px;
+	top:50%;
+	transform: translateY(-50%);
+}
+
+.find.btnType .inputBox .btn {
+	top : 7px;
+	transform : none;
+}
+
+
+
+
+.qrBox{
+}
+.qrBox .qrBtn{
+	border:1px solid #24284f;
+	line-height: 40px;
+	position:relative;
+	display:inline-block;
+	border-radius: 4px;
+	font-size: 15px;
+	width: 200px;
+	padding-left:42px;
+	background:url("../img/icon_qr.jpg") no-repeat left 15px center / 20px 20px;
+}
+.qrBox .qrBtn:after{
+	content:'';
+	position:absolute;
+	right:15px;
+	top:50%;
+	transform: translateY(-50%);
+	background:url("../img/icon_headerArrow.png") no-repeat center / cover;
+	width: 7px;
+	height: 11px;
+}
+
+
+section .inner{
+	padding:20px;
+}
+section.btnType{
+	padding-bottom:100px;
+	position : relative;
+}
+/* ksg_20190910_1802 open : for "app\location\location.php"  */
+
+/* ksg_20190915_1847 open : inner */
+section.areaShow .map{
+	background-color : #ccc;
+	position : relative;
+	width : 100%;
+	padding-top : 83%;
+
+}
+section.areaShow .map:after {
+	content : "구나, 동으로 검색해주세요.";
+	position : absolute;
+	top : 50%;
+	left : 50%;
+	transform : translate(-50%, -50%);
+	font-size : 16px;
+	z-index : 1;
+}
+section.areaShow .mapInfo{
+	padding-bottom: 36px;
+	line-height: 18px;
+	font-size: 15px;
+
+}
+
+.map img {
+	width  : 100%;
+	height : 100%;
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 10;
+}
+/* ksg_20190915_1847 close : inner " */
+
+.locationBox {
+	width : calc(100% - 40px);
+	/* height : 150px; */
+	background-color : #fff;
+	position : absolute;
+	left : 50%;
+	top : 60%;
+	transform : translate(-50%, -50%);
+	border-radius : 5px;
+	z-index : 10;
+}
+.locationBox .locationTitle {
+	font-size : 15px;
+	font-weight : 600;
+}
+.locationBox .locationInfo {
+	margin-top : 40px;
+}
+.locationBox .locaStatus {
+	margin-top : 15px;
+	position : relative;
+}
+.locationBox .locaStatus div {
+	display : inline-block;
+	font-size : 15px;
+}
+.locationBox .locaStatus div + div {
+	position : absolute;
+	top : 50%;
+	right : 0;
+	transform : translateY(-50%);
+	font-weight : 600;
+}
+.locaStatus .possible {
+	color : #1b1f40;
+}
+.locaStatus .impossible {
+	color : #7b03fe;
+}
+/* :: 지도 및 지도 내부 상세정보 박스 구간 */
+.locationBox .locationInner {
+	position : relative;
+	padding : 20px;
+}
+.locationBox .locationInner:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 53%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-bottom-color: #fff;
+	border-top: 0;
+	margin-left: -20px;
+	margin-top: -20px;
+	border-left : 10px solid transparent;
+	border-right : 10px solid transparent;
+}
+/* ksg_20190910_1802 close : for "app\location\location.php"  */
+
+
+section.find .inputBox + .inputBox{
+	margin-top: 10px;
+}
+.inputInfo{
+	font-size: 12px;
+	line-height: 15px;
+
+}
+.btnGroup{
+	padding:0 15px;
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:35px;
+	font-size: 0;
+}
+.btnGroup.loginBox {
+	position : initial;
+}
+
+.btnGroup.half{
+	margin:0 15px;
+	border:1px solid #7b03fe;
+	padding:0;
+	border-radius: 4px;
+}
+.btnGroup a.half{
+	border:none;
+	border-radius: 0;
+}
+
+.menuList{
+	font-size: 0;
+}
+
+.menuList a{
+	display:block;
+	position:relative;
+	padding:0 20px 0 20px;
+}
+
+.menuList a:after{
+	content: '';
+	position:absolute;
+	right:20px;
+	top:50%;
+	transform: translateY(-50%);
+	width: 7px;
+	height: 11px;
+	background:url("../img/icon_headerArrow.png") no-repeat center center / 7px 11px;
+}
+
+
+.menuList a.typeSelector.active:after{
+	background:url("../img/icon_headerArrow_up.png") no-repeat center center / 11px 7px;
+	width : 11px;
+	height : 7px;
+}
+
+
+
+
+.menuList a.typeSelector {
+	padding : 0;
+}
+.menuList a.typeSelector:after{
+	right : 15px;
+}
+.codeInputBox {
+	display : none;
+	width : 100%;
+	padding-top : 9px;
+}
+.codeInputBox.active {
+	display : block;
+}
+.codeInputBox input {
+	background-color : #f1f3ff;
+	width : 100%;
+	font-size : 15px;
+	padding : 20px 15px;
+}
+
+
+
+
+.menuList a.icon.unPayment{
+	background:url("../img/icon_menu_unPayment.png") no-repeat left 20px center / 24px 20px;
+}
+
+.menuList a.icon.pointSet{
+	background:url("../img/icon_menu_pointSet.png") no-repeat left 20px center / 24px 20px;
+}
+
+.menuList a.icon.leaseState{
+	background:url("../img/icon_menu_leaseState.png") no-repeat left 20px center / 23.5px 20.5px;
+}
+
+.menuList a.icon.payHistory{
+	background:url("../img/icon_menu_payHistory.png") no-repeat left 20px center / 25px 20px;
+}
+
+.menuList a.icon.profileSet{
+	background:url("../img/icon_menu_profileSet.png") no-repeat left 20px center / 20px 20px;
+}
+
+
+.menuList a.icon.pointPlus{
+	background:url("../img/icon_menu_pointPlus.png") no-repeat left 20px center / 20px 20px;
+}
+
+
+.menuList a.icon.pointMinus{
+	background:url("../img/icon_menu_pointMinus.png") no-repeat left 20px center / 20px 20px;
+}
+
+
+.menuList a.icon.pointHistory{
+	background:url("../img/icon_menu_pointHistory.png") no-repeat left 20px center / 20px 20px;
+}
+
+.menuList a.plus,
+.menuList a.use,
+.menuList a.refund {
+	padding-left:61px;
+}
+.menuList a.plus:before,
+.menuList a.use:before,
+.menuList a.refund:before{
+	content:'충전';
+	position:absolute;
+	left:15px;
+	top:50%;
+	transform: translateY(-50%);
+	display:inline-block;
+	font-size: 15px;
+	font-weight: 700;
+	color: #008aff;
+}
+.menuList a.use:before{
+	content:'사용';
+	color: #d20059;
+}
+.menuList a.refund:before{
+	content:'환불';
+	color: #f37236;
+}
+.menuList a.icon{
+	padding:0 20px 0 54px;
+}
+.menuList a .menuTxt{
+	display:inline-block;
+	line-height: 50px;
+	font-size: 15px;
+}
+
+
+.agreeGroup{
+	margin-top: 10px;
+}
+.agreeGroup .allChk{
+	padding:16.5px 0;
+	border-bottom:0.5px solid #f2f6ff;
+}
+.agreeGroup .agreeList .agreeItem{
+	margin-top: 15px;
+	position: relative;
+}
+
+.agreeGroup .agreeList .agreeInfoBtn{
+	font-size: 0;
+	position:absolute;
+	right:0;
+	top:50%;
+	transform: translateY(-50%);
+	padding:5px;
+}
+.agreeGroup .agreeList .agreeInfoBtn .ic_agree{
+	background:url("../img/icon_headerArrow.png") no-repeat center / cover;
+	width: 7px;
+	height: 11px;
+}
+
+section.agree .agreeCon {
+	font-size: 12px;
+	line-height: 15px;
+	background-color: #fff;
+	padding:17.5px 15px;
+	height: calc(100vh - 90px);
+
+}
+section.agree .agreeCon dl + dl{
+	margin-top: 20px;
+
+}
+section.agree .agreeCon dt{
+	font-weight: 700;
+}
+
+
+.infoGroup .infoTit{
+	border-bottom:0.5px solid #f2f6ff;
+	padding-bottom: 20px;
+}
+.infoGroup .infoTit .row .con{
+	font-size: 12px;
+	font-weight: 400;
+}
+.infoGroup .row .con.accent{
+	font-weight: 900;
+	text-decoration: underline;
+	text-underline-position: under;
+}
+.infoGroup .row{
+	position:relative;
+	font-size: 0;
+	line-height: 15px;
+}
+.infoGroup .subject,
+.infoGroup .con{
+	vertical-align: middle;
+	font-size: 15px;
+	font-weight: 500;
+	display:inline-block;
+}
+.infoGroup .con{
+	position:absolute;
+	top:50%;
+	right:0;
+	transform: translateY(-50%);
+}
+.infoGroup .con.sub{
+	font-size: 12px;
+}
+
+.infoGroup .infoCon .row{
+	margin-top: 15px;
+}
+
+.infoGroup .infoCon .con {
+    width: calc(100% - 100px);
+	vertical-align : top;
+	position : initial;
+	transform : none;
+	text-align : right;
+}
+
+.infoGroup .infoCon .subject {
+	min-width : 100px;
+	vertical-align : top;
+}
+
+
+.infoGroup .infoGuide {
+	padding-top : 50px;
+	text-align : center;
+	width : 100%;
+	font-size : 15px;
+	font-weight : 600;
+}
+
+
+.inner .processNoticeBox {
+	padding-top : 80px;
+	padding-bottom : 90px;
+	width : 100%;
+	text-align : center;
+}
+.processNoticeBox .icon_payFin {
+	background : url(/common/img/icon_payFin.png) no-repeat center / cover;
+	width : 20px;
+	height : 20px;
+	margin-bottom : 15px;
+}
+.processNoticeBox .noticeInfo {
+	font-size : 15px;
+	font-weight : 600;
+}
+
+
+
+.boardCon{
+	margin-top: 15px;
+	font-size: 15px;
+	line-height: 20px;
+
+}
+
+.havePoint{
+	border-bottom:0.5px solid #f2f6ff;
+	margin:0 15px;
+	position:relative;
+	padding: 20px 0;
+}
+
+.havePoint .point{
+	font-weight: 900;
+	font-size: 18px;
+	position:absolute;
+	right:0;
+	top:50%;
+	transform: translateY(-50%);
+}
+.havePoint .txt{
+	font-size: 15px;
+	font-weight: 500;
+}
+
+/* ksg_20190910_1650 open : for "app\member\login.php". */
+.container.loginContainer {
+	/* background: url(/common/img/img_logo1.png) no-repeat center top 25px; */
+	background-color : #24284f;
+}
+.loginContainer .logoBox {
+	width : 100%;
+	height : 100%;
+	padding-bottom : 50px;
+	padding-top : 64px;
+	text-align : center;
+}
+.loginContainer .logoBox img {
+	width : 115px;
+	height :50px;
+}
+.loginContainer .inputBox {
+	color : #fff;
+	/* background-color : #1b1f40; */
+}
+.loginContainer .inputBox input {
+	color : #a5a9d2;
+	background-color: #1b1f40;
+}
+.loginContainer .inputBox input::placeholder {
+	color : #a5a9d2;
+}
+.loginCheck label input[type="checkbox"] ~ span,
+.loginCheck label input[type="radio"] ~ span {
+	color: #a5a9d2;
+	font-size : 13px;
+}
+.loginCheck label input[type="checkbox"],
+.loginCheck label input[type="radio"] {
+	background: url(/common/img/icon_cbox_off_login.png) no-repeat center / cover;
+}
+.loginCheck label input[type="checkbox"]:checked,
+.loginCheck label input[type="radio"]:checked {
+	background: url(/common/img/icon_cbox_on.png) no-repeat center / cover;
+}
+.loginCheck label input[type="checkbox"]:checked ~ span,
+.loginCheck label input[type="radio"]:checked ~ span {
+	color : #ffffff;
+}
+div.loginCheck {
+	margin-top : 11px;
+}
+.btnGroup.loginBox {
+	top : 339px;
+}
+
+.btnGroup.codeAqquireBtn {
+	display : none;
+}
+.btnGroup.codeAqquireBtn.active {
+	display : block;
+}
+
+
+div.subBtn {
+	font-size : 0;
+	text-align : center;
+	margin-top : 20px;
+}
+.subBtn a,
+.subBtn div {
+	color : #a5a9d2;
+	display : inline-block;
+	font-size : 13px;
+}
+/* ksg_20190910_1650 close : for "app\member\login.php". */
+
+/* ksg_20190915_2131 single : for "app\mypage\point\pointHistroyList.php". */
+.emptyList {
+	position : absolute;
+	top : 125px;
+	left : 50%;
+	width : 100%;
+	text-align : center;
+	transform : translatex(-50%);
+	font-size : 16px;
+	font-weight : 500;
+}
+
+
+/* ksg_20190916_1449 open : for "app\getapp\event\getapp_get_app.php" */
+/* 앱 다운로드 페이지 기본 구간 */
+.container.getapp {
+	max-width : 450px;
+	min-width : 0;
+	margin : 0 auto;
+}
+.container.getapp .contents {
+	padding : 50px 25px 0;
+	margin : 0;
+}
+.container.getapp img {
+	width : 100%;
+}
+.container.getapp .btnBox .btn.getappBtn {
+	width : 100%;
+	margin-bottom : 25px;
+}
+.container.getapp .getapp_logo {
+	font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    padding: 80px 0 20px;
+	color: #289bfe;
+}
+.container.getapp .getapp_logo strong {
+	color: #24284f;
+	font-weight : 700;
+}
+.container.getapp header {
+	border : none;
+}
+/* 앱 다운로드 페이지 로고 구간 */
+.container.getapp img.getappLogo {
+	width : 200px;
+	height : auto;
+}
+/* ksg_20190916_1449 close : for "app\getapp\event\getapp_get_app.php" */
+
+
+
+.publishingTipBox {
+	font-size : 15px;
+	padding : 10px;
+	font-weight : 600;
+	background-color : lime;
+	color : #000;
+	position : fixed;
+	top : 20px;
+	right : 20px;
+}
+.publishingTipBox .info {
+	display : none;
+}
+.publishingTipBox:hover .info {
+	font-weight : 400;
+	display : block;
+}
+
+
+
+.container.overlay:before {
+	content: '';
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	top:0;
+	background:rgba(0,0,0,0.5);
+	z-index: 1;
+}
+
+.container.manualyOverlay:before {
+	content: '';
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	top:0;
+	background:rgba(0,0,0,0.5);
+	z-index: 1;
+}
+.popup {
+	display : none;
+	position : fixed;
+	top : 50%;
+	left : 50%;
+	transform : translate(-50%, -50%);
+	-webkit-transform : translate(-50%, -50%);
+	background-color : #fff;
+	z-index : 150;
+	/* width : calc(100% - 30px); */
+	min-width: 320px;
+	max-width : 660px;
+	border-radius : 5px;
+}
+.popup .popupTitle {
+	padding : 20px 20px 0 20px;
+	font-weight : 800;
+	font-size : 18px;
+	text-align : center;
+}
+.popup .popupCon {
+	padding : 20px;
+}
+.popup .popupCon textarea {
+	padding : 20px;
+	font-size : 14px;
+	resize : none;
+	border : 1px solid #ccc;
+	width : 100%;
+	min-height : 250px;
+}
+
+.popup .btnGroup {
+	position : relative;
+	bottom : 0;
+	margin-bottom : 20px;
+}
+
+.popup .popupFooter{
+	font-size: 0;
+	border:1px solid #7b03fe;
+	text-align: center;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.popup .popupFooter a.full{
+	width: 100%;
+	background-color: #7b03fe;
+	color: #fff;
+}
+
+.popup .popupFooter a{
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #7b03fe;
+	width: 50%;
+	display:inline-block;
+	vertical-align: top;
+}
+.popup .popupFooter a + a{
+	background-color: #7b03fe;
+	color: #fff;
+}
+
+#popup .popupCon{
+	padding:24px 0;
+}
+.popup .popupCon .mainTxt{
+	font-size: 15px;
+	font-weight: 500;
+	line-height:  18px;
+	text-align: center;
+}
+.popup .popupCon .mainTxt.type1{
+	padding:20px 0;
+}
+
+.popup .popupCon .subTxt{
+	padding-top: 7px;
+	font-size: 12px;
+	text-align: center;
+
+}
+
+
+
+.manualyPopup {
+	display : none;
+	position : fixed;
+	top : 50%;
+	left : 50%;
+	transform : translate(-50%, -50%);
+	-webkit-transform : translate(-50%, -50%);
+	background-color : #fff;
+	z-index : 150;
+	/* width : calc(100% - 30px); */
+	min-width: 320px;
+	max-width : 660px;
+	border-radius : 5px;
+}
+.manualyPopup .popupTitle {
+	padding : 20px 20px 0 20px;
+	font-weight : 800;
+	font-size : 18px;
+	text-align : center;
+}
+.manualyPopup .popupCon {
+	padding : 20px;
+}
+.manualyPopup .popupCon textarea {
+	padding : 20px;
+	font-size : 14px;
+	resize : none;
+	border : 1px solid #ccc;
+	width : 100%;
+	min-height : 250px;
+}
+
+.manualyPopup .btnGroup {
+	position : relative;
+	bottom : 0;
+	margin-bottom : 20px;
+}
+
+.manualyPopup .popupFooter{
+	font-size: 0;
+	border:1px solid #7b03fe;
+	text-align: center;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.manualyPopup .popupFooter a.full{
+	width: 100%;
+	background-color: #7b03fe;
+	color: #fff;
+}
+
+.manualyPopup .popupFooter a{
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #7b03fe;
+	width: 50%;
+	display:inline-block;
+	vertical-align: top;
+}
+.manualyPopup .popupFooter a + a{
+	background-color: #7b03fe;
+	color: #fff;
+}
+
+
+.manualyPopup .popupCon .mainTxt{
+	font-size: 15px;
+	font-weight: 500;
+	line-height:  18px;
+	text-align: center;
+}
+.manualyPopup .popupCon .mainTxt.type1{
+	padding:20px 0;
+}
+
+.manualyPopup .popupCon .subTxt{
+	padding-top: 7px;
+	font-size: 12px;
+	text-align: center;
+
+}
+
+
+/* :: 키오스크 위치찾기 포인트 정보 팝업 open */
+.locationBoxCon {
+	width : calc(100% - 40px);
+	height : 165px;
+	background-color : #fff;
+	position : absolute;
+	left : 50%;
+	top : 60%;
+	transform : translate(-50%, -50%);
+	border-radius : 5px;
+	z-index : 10;
+}
+.locationBoxCon .wrap {
+	position: absolute;
+	left: 0;
+	bottom: 140px;
+	width: 320px;
+	height : 165px;
+	margin-left: -144px;
+	text-align: left;
+	font-size: 12px;
+	line-height: 1.5;
+}
+.locationBoxCon .wrap * {
+	padding: 0;
+	margin: 0;
+}
+.locationBoxCon .wrap .info {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	border-bottom: 2px solid #ccc;
+	border-right: 1px solid #ccc;
+	overflow: hidden;
+	background: #fff;
+}
+.locationBoxCon .wrap .info:nth-child(1) {
+	border: 0;
+	box-shadow: 0px 1px 2px #888;
+}
+.locationBoxCon .info .title {
+	padding: 5px 0 0 10px;
+	height: 30px;
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	font-size: 18px;
+	font-weight: bold;
+}
+.locationBoxCon .info .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #888;
+	width: 17px;
+	height: 17px;
+	background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');
+}
+.locationBoxCon .info .close:hover {
+	cursor: pointer;
+}
+.locationBoxCon .info .body {
+	position: relative;
+	overflow: hidden;
+}
+.locationBoxCon .info .desc {
+	position: relative;
+	margin: 13px 0 0 13px;
+	height: 75px;
+}
+.locationBoxCon .desc .ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.locationBoxCon .desc .jibun {
+	font-size: 11px;
+	color: #888;
+	margin-top: -2px;
+}
+/* .info .img {
+	position: absolute;
+	top: 6px;
+	left: 5px;
+	width: 73px;
+	height: 71px;
+	border: 1px solid #ddd;
+	color: #888;
+	overflow: hidden;
+} */
+.locationBoxCon .info:after {
+	content: '';
+	position: absolute;
+	margin-left: -12px;
+	left: 50%;
+	bottom: -12px;
+	width: 22px;
+	height: 12px;
+	background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+.locationBoxCon .info .link {
+	color: #5085BB;
+}
+/* :: 키오스크 위치찾기 포인트 정보 팝업 close */
